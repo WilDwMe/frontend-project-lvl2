@@ -19,10 +19,10 @@ const def = (file1, file2) => {
     } else if (_.has(sortedOne, key)) {
       console.log(`- ${key} : ${sortedOne[key]}`);
     }
-    for (const key2 in sortedTwo) {
-      if (!_.has(sortedOne, key2)) {
-        console.log(`+ ${key2} : ${sortedTwo[key2]}`);
-      }
+  }
+  for (const key in sortedTwo) {
+    if (!_.has(sortedOne, key)) {
+      console.log(`+ ${key} : ${sortedTwo[key]}`);
     }
   }
 };
