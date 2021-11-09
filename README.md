@@ -4,4 +4,4 @@
 ## Front-end project lvl2
  Short CLI app for compare two JSON files.
 
-https://asciinema.org/a/Uy5wcBh0alEmgd8mZ2h4bys9V
+[![asciicast](https://asciinema.org/a/Uy5wcBh0alEmgd8mZ2h4bys9V.svg)](https://asciinema.org/a/Uy5wcBh0alEmgd8mZ2h4bys9V)
