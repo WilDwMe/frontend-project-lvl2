@@ -1,4 +1,3 @@
-### Hexlet tests and linter status:
 [![Actions Status](https://github.com/WilDwMe/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/WilDwMe/frontend-project-lvl2/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b273f6684700ce7078a/maintainability)](https://codeclimate.com/github/WilDwMe/frontend-project-lvl2/maintainability)
 [![Node CI](https://github.com/WilDwMe/frontend-project-lvl2/actions/workflows/node-ci.yml/badge.svg?branch=main)](https://github.com/WilDwMe/frontend-project-lvl2/actions/workflows/node-ci.yml)
