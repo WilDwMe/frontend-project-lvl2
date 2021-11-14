@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import def from '../index.js';
+import def from '../Src/index.js';
 
 const program = new Command();
 program
