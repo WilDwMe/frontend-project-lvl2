@@ -3,6 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b273f6684700ce7078a/maintainability)](https://codeclimate.com/github/WilDwMe/frontend-project-lvl2/maintainability)
 [![Node CI](https://github.com/WilDwMe/frontend-project-lvl2/actions/workflows/node-ci.yml/badge.svg?branch=main)](https://github.com/WilDwMe/frontend-project-lvl2/actions/workflows/node-ci.yml)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6b273f6684700ce7078a/test_coverage)](https://codeclimate.com/github/WilDwMe/frontend-project-lvl2/test_coverage)
+
 ## Front-end project lvl2
  Short CLI app for compare two JSON files.
 
