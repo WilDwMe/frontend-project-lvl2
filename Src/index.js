@@ -1,12 +1,15 @@
 import fs from 'fs';
 import _ from 'lodash';
 
-const def = (file1, file2) => {
-  const fileOne = JSON.parse(fs.readFileSync(file1));
-  const fileTwo = JSON.parse(fs.readFileSync(file2));
+const parseJson = (file) => JSON.parse(fs.readFileSync(file));
+const sort = (file) => Object.fromEntries(Object.entries(file).sort());
 
-  const sortedOne = Object.fromEntries(Object.entries(fileOne).sort());
-  const sortedTwo = Object.fromEntries(Object.entries(fileTwo).sort());
+const def = (file1, file2) => {
+  const fileOne = parseJson(file1);
+  const fileTwo =  parseJson(file2);
+
+  const sortedOne = sort(fileOne);
+  const sortedTwo = sort(fileTwo);
 
   let result = {};
 
