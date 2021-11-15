@@ -33,3 +33,17 @@ test('GenDiff - other case', () => {
     tools: 'VScode',
   });
 });
+
+const file5 = getFixturePath('file5.yml');
+const file6 = getFixturePath('file6.yml');
+
+test('GenDiff - Yaml case', () => {
+  expect(def(file5, file6)).toEqual({
+    follow: false,
+    host: 'hexlet.io',
+    proxy: '123.234.53.22',
+    // timeout: 50
+    timeout: 20,
+    verbose: true,
+  });
+});
