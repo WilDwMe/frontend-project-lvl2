@@ -1,26 +1,10 @@
-import fs from 'fs';
 import _ from 'lodash';
-import yaml from 'js-yaml';
-import path from 'path';
+import { parser as parse } from '../Src/modules/parsers.js'
 
-const parseJson = (file) => JSON.parse(fs.readFileSync(file));
-const parseYml = (file) => yaml.load(fs.readFileSync(file));
+
 const sort = (file) => Object.fromEntries(Object.entries(file).sort());
 
 const def = (file1, file2) => {
-  let format;
-
-  if(path.extname(file1) === path.extname(file2)){
-    format = path.extname(file1);
-  }
-
-  let parse;
-
-if (format === '.json') {
-  parse = parseJson;
-} else if (format === '.yml') {
-  parse = parseYml;
-}
 
   const fileOne = parse(file1);
   const fileTwo =  parse(file2);
