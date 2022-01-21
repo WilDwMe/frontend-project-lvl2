@@ -6,7 +6,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '../', '__fixtures__', filename);
-// const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 test('GenDiff - main function', () => {
   const file1 = getFixturePath('file1.json');
@@ -16,7 +15,6 @@ test('GenDiff - main function', () => {
     host: 'hexlet.io',
     proxy: '123.234.53.22',
     timeout: 20,
-    // 'timeout': 20,
     verbose: true,
   });
 });
@@ -40,58 +38,38 @@ test('GenDiff - Yaml case', () => {
     follow: false,
     host: 'hexlet.io',
     proxy: '123.234.53.22',
-    // timeout: 50
     timeout: 20,
     verbose: true,
   });
 });
 
-// test('GenDiff - Deep equal case', () => {
-//   const file1 = getFixturePath('fileDeep1.json');
-//   const file2 = getFixturePath('fileDeep2.json');
-//   expect(def(file1, file2)).toEqual({
-//     common: {
-//       follow: false,
-//       setting1: 'Value 1',
-//       setting2: 200,
-//       setting3: true,
-//       // setting3: null,
-//       setting4: 'blah blah',
-//       setting5: {
-//         key5: 'value5',
-//       },
-//       setting6: {
-//         doge: {
-//           // wow: ,
-//           wow: 'so much',
-//         },
-//         key: 'value',
-//         ops: 'vops',
-//       },
-//     },
-//     group1: {
-//       // baz: 'bas',
-//       baz: 'bars',
-//       foo: 'bar',
-//       // nest: {
-//       //   key: 'value',
-//       // },
-//       nest: 'str',
-//     },
-//     group2: {
-//       abc: 12345,
-//       deep: {
-//         id: 45,
-//       },
-//     },
-//     group3: {
-//       deep: {
-//         id: {
-//           number: 45,
-//         },
-//       },
-//       fee: 100500,
-//     },
-//   });
-// });
-// 
+test('GenDiff - Deep equal case', () => {
+  const file1 = getFixturePath('fileDeep1.json');
+  const file2 = getFixturePath('fileDeep2.json');
+  expect(def(file1, file2)).toEqual({
+    common: {
+      setting1: 'Value 1',
+      setting2: 200,
+      setting3: true,
+      setting6: {
+        doge: {
+          wow: '',
+        },
+        key: 'value',
+      },
+    },
+    group1: {
+      baz: 'bas',
+      foo: 'bar',
+      nest: {
+        key: 'value',
+      },
+    },
+    group2: {
+      abc: 12345,
+      deep: {
+        id: 45,
+      },
+    },
+  });
+});

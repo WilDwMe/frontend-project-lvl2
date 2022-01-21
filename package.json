@@ -7,7 +7,7 @@
     "gendiff": "bin/gendiff.js"
   },
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx jest --bail --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
