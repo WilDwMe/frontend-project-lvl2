@@ -2,8 +2,8 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
 
-export const parser = (data) => {
 
+export const parser = (data) => {
     const format = path.extname(data);
  
   if (format === '.json') {
@@ -14,4 +14,4 @@ export const parser = (data) => {
     return parseYml(data);
   }
 
-}
+};
