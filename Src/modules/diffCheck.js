@@ -23,6 +23,7 @@ for (const key in dataOne) {
   if (_.has(dataTwo, key)) {
     if (dataOne[key] === dataTwo[key]) {
       result.push(`\n${key}: ${dataOne[key]}`);
+      
     } else if (dataOne[key] !== dataTwo[key]) {
         result.push(`\n- ${key}: ${dataOne[key]}`);
         result.push(`\n+ ${key}: ${dataTwo[key]}`);
