@@ -18,29 +18,25 @@ const diffCheck = (file1, file2) => {
 const dataOne = sort(parse(file1));
 const dataTwo = sort(parse(file2));
 
-let result = {};
-
+let result = [];
 for (const key in dataOne) {
   if (_.has(dataTwo, key)) {
     if (dataOne[key] === dataTwo[key]) {
-      // continue;
-      result[key] = dataOne[key]; 
+      result.push(`\n${key}: ${dataOne[key]}`);
     } else if (dataOne[key] !== dataTwo[key]) {
-      result[key] = dataOne[key];
-      result[key] = dataTwo[key];
+        result.push(`\n- ${key}: ${dataOne[key]}`);
+        result.push(`\n+ ${key}: ${dataTwo[key]}`);
     }
   } else if (_.has(dataOne, key)) {
-    result[key] = dataOne[key];
+    result.push(`\n- ${key}: ${dataOne[key]}`);
   }
 }
 for (const key in dataTwo) {
   if (!_.has(dataOne, key)) {
-    result[key] = dataTwo[key];
+    result.push(`\n+ ${key}: ${dataTwo[key]}`);
   }
 }
-return result;
+return '{'+String(result)+'\n}';
 };
-
-// console.log(diffCheck(dataOne, dataTwo));
 
 export default diffCheck;
